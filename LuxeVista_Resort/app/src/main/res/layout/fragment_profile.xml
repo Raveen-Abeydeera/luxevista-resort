@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".ui.fragments.ProfileFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile"
+            android:textColor="@color/text_primary"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+        <!-- Profile Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/ic_profile"
+                app:civ_border_color="@color/primary"
+                app:civ_border_width="2dp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/profile_guest_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sophia Bennett"
+                    android:textColor="@color/text_primary"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gold Member - Joined 2021"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Account Details -->
+        <TextView
+            style="@style/ProfileSectionHeader"
+            android:text="Account Details" />
+
+        <androidx.cardview.widget.CardView style="@style/ProfileCardView">
+            <LinearLayout style="@style/ProfileCardLinearLayout">
+                <TextView style="@style/ProfileLabel" android:text="Email" />
+                <TextView android:id="@+id/profile_email" style="@style/ProfileValue" android:text="sophia.bennett@email.com" />
+                <View style="@style/Divider" />
+                <TextView style="@style/ProfileLabel" android:text="Phone" />
+                <TextView android:id="@+id/profile_phone" style="@style/ProfileValue" android:text="+1 (555) 123-4567" />
+                <View style="@style/Divider" />
+                <TextView style="@style/ProfileLabel" android:text="Address" />
+                <TextView android:id="@+id/profile_address" style="@style/ProfileValue" android:text="123 Ocean Drive, Miami, FL" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Preferences -->
+        <TextView
+            style="@style/ProfileSectionHeader"
+            android:text="Preferences" />
+        <androidx.cardview.widget.CardView style="@style/ProfileCardView">
+            <LinearLayout style="@style/ProfileCardLinearLayout">
+                <TextView android:id="@+id/profile_payment_method" style="@style/ProfileClickableItem" android:text="Payment Method" />
+                <View style="@style/Divider" />
+                <RelativeLayout style="@style/ProfileItem">
+                    <TextView style="@style/ProfileLabel" android:text="Notifications" />
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:checked="true"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Bookings -->
+        <TextView
+            style="@style/ProfileSectionHeader"
+            android:text="Bookings" />
+        <androidx.cardview.widget.CardView style="@style/ProfileCardView">
+            <LinearLayout style="@style/ProfileCardLinearLayout">
+                <TextView android:id="@+id/profile_upcoming_bookings" style="@style/ProfileClickableItem" android:text="Upcoming Bookings" />
+                <View style="@style/Divider" />
+                <TextView android:id="@+id/profile_past_bookings" style="@style/ProfileClickableItem" android:text="Past Bookings" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Account -->
+        <TextView
+            style="@style/ProfileSectionHeader"
+            android:text="Account" />
+        <androidx.cardview.widget.CardView style="@style/ProfileCardView">
+            <LinearLayout style="@style/ProfileCardLinearLayout">
+                <TextView android:id="@+id/profile_help_support" style="@style/ProfileClickableItem" android:text="Help &amp; Support" />
+                <View style="@style/Divider" />
+                <TextView android:id="@+id/profile_terms" style="@style/ProfileClickableItem" android:text="Terms and Conditions" />
+                <View style="@style/Divider" />
+                <TextView android:id="@+id/profile_privacy" style="@style/ProfileClickableItem" android:text="Privacy Policy" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/logout_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="@color/surface"
+            android:text="Log Out"
+            android:textColor="@color/red"
+            app:strokeColor="@color/red"
+            app:strokeWidth="1dp" />
+
+    </LinearLayout>
+</ScrollView>

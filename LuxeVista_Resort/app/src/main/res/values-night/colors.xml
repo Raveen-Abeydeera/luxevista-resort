@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base Colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- App Theme Colors (Dark) -->
+    <color name="primary">#86B6F6</color>
+    <color name="primary_dark">#B4D4FF</color>
+    <color name="accent">#2C2C2E</color>
+    <color name="background">#000000</color>
+    <color name="surface">#1C1C1E</color>
+
+    <!-- Text Colors (Dark) -->
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#AEAEB2</color>
+
+    <!-- Other UI Colors (Dark) -->
+    <color name="divider">#3A3A3C</color>
+    <color name="red">#FF453A</color>
+    <color name="green">#32D74B</color>
+</resources>
+
